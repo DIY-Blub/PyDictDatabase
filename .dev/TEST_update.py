@@ -21,7 +21,7 @@ print("['name']: " + str(result["name"]) + "        " + str(type(result["name"])
 print("")
 print("")
 
-## EXAMPLE: commit / UPDATE one value
+## EXAMPLE: commit / UPDATE more than one value
 print('commit("UPDATE connections SET noFail_timestamp = {},value = {} WHERE id = {}".format(12345678,True,"wlan"))')
 result = DictDB.commit("UPDATE connections SET noFail_timestamp = {},value = {} WHERE id = {}".format(12345678,True,"wlan"))
 print("show return: " + str(result) + "        " + str(type(result)))
