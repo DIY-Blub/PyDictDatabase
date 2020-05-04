@@ -2,16 +2,6 @@
 
 Python Dictionary based database for tiny databases.
 
-I am using this type of database in two of my projects:
-
-1. for my plant watering system to collect my last status data
-
-2. for my SmartPi as manageable & clear structure for matrixes
-
-Comment:
-
-> The SmartPi also uses a MySQL database to collect data. As there are many read/write cycles for some attributes. It makes more sense to leave them in memory which is also gentler on the memory card (RasPi).
-
 **useful for**
 
 * matrix or very small database
@@ -23,6 +13,18 @@ Comment:
 * collecting data
 
 * growing databases
+
+**comment:**
+
+I am using this type of database in two of my projects:
+
+1. for my plant watering system to collect my last status data
+
+2. for my SmartPi as manageable & clear structure for matrixes
+
+> The SmartPi also uses a MySQL database to collect data. As there are many read/write cycles for some attributes. It makes more sense to leave them in memory which is also gentler on the memory card (RasPi).
+
+
 
 
 ## features
