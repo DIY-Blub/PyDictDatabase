@@ -22,9 +22,7 @@ I am using this type of database in two of my projects:
 
 2. for my SmartPi as manageable & clear structure for matrixes
 
-> The SmartPi also uses a MySQL database to collect data. As there are many read/write cycles for some attributes. It makes more sense to leave them in memory which is also gentler on the memory card (RasPi).
-
-
+> The SmartPi also uses a MySQL database to collect data. As there are many read/write cycles for some attributes. It makes more sense to leave them in memory which is also gentler on the memory card (Raspberry Pi).
 
 
 ## features
