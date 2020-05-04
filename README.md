@@ -66,6 +66,11 @@ DictDB = PyDictDatabase(database=data)
 DictDB = PyDictDatabase(database=data,settings={"ERROR_OUTPUT":True})
 ```
 
+**options:**
+* "EXPORT_DATABASE":True for new feature, available soon (default: False)
+* "ERROR_OUTPUT":True for error output, DEBUG-MODE (default: False)
+* "ERROR_EXIT":True to stop script with exit(1), if an error occurs with select/update (default: False)
+
 ### SELECT Data (short instruction)
 
 ```
