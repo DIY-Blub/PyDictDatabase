@@ -1,4 +1,4 @@
-# PyDictDatabase
+# PyDictDatabase [![Build Status](https://travis-ci.org/DIY-Blub/PyDictDatabase.svg?branch=master)](https://travis-ci.org/DIY-Blub/PyDictDatabase.svg?branch=master)
 
 Python Dictionary based database for tiny databases.
 
