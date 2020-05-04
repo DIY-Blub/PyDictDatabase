@@ -127,15 +127,12 @@ class PyDictDatabase():
                 else:
                     return None
         elif target == bool:
-            try:
-                bool(string)
-            except ValueError:
-                return None
+            if string == "True":
+                return True
+            elif string == "False":
+                return False
             else:
-                if str(bool(string)) == string:
-                    return bool(string)
-                else:
-                    return None
+                return None
         elif target == str:
             try:
                 str(string)
