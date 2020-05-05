@@ -12,11 +12,11 @@ data = {
                     },
         # id = channel of Analog/Digital-Converter
         'dataADC':  {
-                    1: {'id':"0",'name':"light dependent resistor 1",'group':"LDR",'timestamp':0,'value':0},
-                    2: {'id':"1",'name':"light dependent resistor 2",'group':"LDR",'timestamp':0,'value':0},
-                    3: {'id':"2",'name':"water sensor 1",'group':"WS",'timestamp':0,'value':0},
-                    4: {'id':"3",'name':"water sensor 2",'group':"WS",'timestamp':0,'value':0},
-                    5: {'id':"4",'name':"rain sensor 1",'group':"RS",'timestamp':0,'value':0},
+                    1: {'id':0,'name':"light dependent resistor 1",'group':"LDR",'timestamp':0,'value':0},
+                    2: {'id':1,'name':"light dependent resistor 2",'group':"LDR",'timestamp':0,'value':0},
+                    3: {'id':2,'name':"water sensor 1",'group':"WS",'timestamp':0,'value':0},
+                    4: {'id':3,'name':"water sensor 2",'group':"WS",'timestamp':0,'value':0},
+                    5: {'id':4,'name':"rain sensor 1",'group':"RS",'timestamp':0,'value':0},
                     },
         # id = 
         'connections':  {
