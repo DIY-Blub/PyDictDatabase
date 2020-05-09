@@ -35,6 +35,8 @@ I am using this type of database in two of my projects:
 
 * UPDATE methods: commit
 
+* optional: export the last status data to a file and reload it during initialization
+
 
 ## usage example
 
@@ -65,7 +67,7 @@ DictDB = PyDictDatabase(database=data,settings={"ERROR_OUTPUT":True})
 ```
 
 **options:**
-* "EXPORT_DATABASE":True for new feature, available soon (default: False)
+* "EXPORT_DATABASE":True for export the last status data to a file and reload it during initialization (default: False)
 * "ERROR_OUTPUT":True for error output, DEBUG-MODE (default: False)
 * "ERROR_EXIT":True to stop script with exit(1), if an error occurs with select/update (default: False)
 
@@ -128,13 +130,15 @@ UPDATE `TABLE` SET `KEY` = `VALUE`,`KEY` = `VALUE`,`KEY` = `VALUE` WHERE `KEY` =
 
 ## in progress
 
-* option to export the last status data to a file and reload it during initialization (method close)
-
 * implement a findall method for chaining
 
 * INSERT option to add a new entry
 
 ## Changelog
+
+### v1.1.0 (09.05.2020)
+
+* new feature: Export-Database
 
 ### v1.0.0 (04.05.2020)
 
