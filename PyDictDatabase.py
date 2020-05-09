@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import re
+import json
+import os
 
 '''
 PyDictDatabase.py is licensed under the GNU General Public License v3.0
@@ -48,7 +50,10 @@ class PyDictDatabase():
 
     def close(self):
         if self.__EXPORT_DATABASE:
-            pass        # TODO / will be needed in a later version
+            with open('PyDictDatabase.json', 'w') as data_file:
+                json.dump(self.__database_data, data_file)
+                data_file.close()
+
 
     def __SELECT(self,search_in_table,search_in_key,search_value,getDataFromKeys):
         ID = self.__getDBdataID(search_in_table,search_in_key,search_value)
@@ -147,11 +152,16 @@ class PyDictDatabase():
             return None
 
     def __database(self,database):
-        self.__database_data = database
-        del database
+        if self.__EXPORT_DATABASE and os.path.isfile("PyDictDatabase.json"):
+            with open('PyDictDatabase.json', 'r') as data_file:
+                self.__database_data = json.load(data_file)
+                data_file.close()
+        else:
+            self.__database_data = database
+            del database
 
     def __settings(self,settings):
-        self.__EXPORT_DATABASE = settings.get('EXPORT_DATABASE', False)     # will be needed in a later version
+        self.__EXPORT_DATABASE = settings.get('EXPORT_DATABASE', False)
         self.__ERROR_OUTPUT = settings.get('ERROR_OUTPUT', False)
         self.__ERROR_EXIT = settings.get('ERROR_EXIT', False)
         del settings
@@ -195,4 +205,4 @@ if __name__ == '__main__':
     print("status code: " + str(result) + "        " + str(type(result)))
 
 
-    DictDB.close()      # not yet necessary but useful for the future
+    DictDB.close()
