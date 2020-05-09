@@ -1,6 +1,8 @@
 # PyDictDatabase [![Build Status](https://travis-ci.org/DIY-Blub/PyDictDatabase.svg?branch=master)](https://travis-ci.org/github/DIY-Blub/PyDictDatabase)
 
-Python Dictionary based database for tiny databases.
+## Introduction
+
+PyDictDatabase is a Python Dictionary based database for tiny databases.
 
 **useful for**
 
@@ -25,7 +27,7 @@ I am using this type of database in two of my projects:
 > The SmartPi also uses a MySQL database to collect data. As there are many read/write cycles for some attributes. It makes more sense to leave them in memory which is also gentler on the memory card (Raspberry Pi).
 
 
-## features
+## Features
 
 * use SELECT and UPDATE like MySQL
 
@@ -38,7 +40,7 @@ I am using this type of database in two of my projects:
 * optional: export the last status data to a file and reload it during initialization
 
 
-## usage example
+## Usage example
 
 You have to save the file PyDictDatabase.py in your project directory.
 
@@ -84,14 +86,14 @@ result = DictDB.fetchall("SELECT id,status FROM table2 WHERE id = name1")
 result = DictDB.commit("UPDATE table2 SET status = False WHERE id = name1")
 ```
 
-## rules
+## Rules
 
 * dict must start with 1, instead of 0
 
 * use the same keys per table (so it is also common with MySQL)
 
 
-## return codes
+## Return codes
 
 ### fetchone / fetchall (SELECT)
 
@@ -106,7 +108,7 @@ result = DictDB.commit("UPDATE table2 SET status = False WHERE id = name1")
 **44 NOT FOUND** - name of the table/key not found
 
 
-## SYNTAX
+## Syntax
 
 **SYNTAX fetchone:**
 ```
